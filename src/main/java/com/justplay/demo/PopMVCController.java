@@ -11,10 +11,11 @@ public class PopMVCController {
     @Autowired
     WorldPopService worldPopService;
 
-    @GetMapping("/world-pop")
+    @GetMapping("/") // AWS/EB deploys applications to root
     String getWorldPop(Model model) {
         WorldPop worldPop = worldPopService.fetchWorldPopFromApi();
         model.addAttribute("worldPop", worldPop.getWorldPopulation().getWorldPop());
         return "worldpop";
     }
+
 }

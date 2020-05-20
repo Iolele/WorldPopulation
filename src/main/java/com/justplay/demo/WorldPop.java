@@ -7,7 +7,8 @@ public class WorldPop {
     @JsonProperty("body")
     private Value worldPopulation;
 
-    public Value getWorldPopulation() {
+    public Value
+    getWorldPopulation() {
         return worldPopulation;
     }
 
